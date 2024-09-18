@@ -1,0 +1,37 @@
+[
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "simple_quarto_website",
+    "section": "",
+    "text": "The American Sweetgum Tree1 is a deciduous tree in the genus Liquidambar native to warm temperate areas of eastern North America and tropical montane regions of Mexico and Central America. Sweetgum is one of the main valuable forest trees in the southeastern United States, and is a popular ornamental tree in temperate climates. It is recognizable by the combination of its five-pointed star-shaped leaves (similar to maple leaves) and its hard, spiked fruits. (Weakley 2015)\n\n\n\nSweetgum Tree in Fall\n\n\nDuis tincidunt eget risus in congue. Aenean tempus cursus metus eget vulputate.\n\n\n\n\n\nflowchart LR\n  A[Climate] --&gt; B{Season?}\n  B --&gt; C[Spring]\n  B --&gt; D[Fall]\n  C --&gt; E(Plant Beans)\n  D --&gt; F(Plant Garlic)\n\n\n\n\n\n\n\n\n\n\n\n\n“The beauty and charm of the wilderness are his for the asking, for the edges of the wilderness lie close beside the beaten roads of the present travel.” - Theodore Roosevelt\n\n\n\n\nTeddy Roosevelt"
+  },
+  {
+    "objectID": "index.html#sweetgum-tree",
+    "href": "index.html#sweetgum-tree",
+    "title": "simple_quarto_website",
+    "section": "",
+    "text": "The American Sweetgum Tree1 is a deciduous tree in the genus Liquidambar native to warm temperate areas of eastern North America and tropical montane regions of Mexico and Central America. Sweetgum is one of the main valuable forest trees in the southeastern United States, and is a popular ornamental tree in temperate climates. It is recognizable by the combination of its five-pointed star-shaped leaves (similar to maple leaves) and its hard, spiked fruits. (Weakley 2015)\n\n\n\nSweetgum Tree in Fall\n\n\nDuis tincidunt eget risus in congue. Aenean tempus cursus metus eget vulputate.\n\n\n\n\n\nflowchart LR\n  A[Climate] --&gt; B{Season?}\n  B --&gt; C[Spring]\n  B --&gt; D[Fall]\n  C --&gt; E(Plant Beans)\n  D --&gt; F(Plant Garlic)"
+  },
+  {
+    "objectID": "index.html#theordore-roosevelt",
+    "href": "index.html#theordore-roosevelt",
+    "title": "simple_quarto_website",
+    "section": "",
+    "text": "“The beauty and charm of the wilderness are his for the asking, for the edges of the wilderness lie close beside the beaten roads of the present travel.” - Theodore Roosevelt\n\n\n\n\nTeddy Roosevelt"
+  },
+  {
+    "objectID": "index.html#random-facts",
+    "href": "index.html#random-facts",
+    "title": "simple_quarto_website",
+    "section": "Random Facts",
+    "text": "Random Facts\n\nThe Pythagorean Theorem: \\(a^2 + b^2 = c^2\\)\nConversion from fahrenheit to celsius: \\[T(°C)=(T(°F)-32)*1.8\\]\n\n\nTable of even and odd numbers\n\n\nEvens\nOdds\n\n\n\n\n12\n17\n\n\n42\n21\n\n\n6\n1"
+  },
+  {
+    "objectID": "index.html#footnotes",
+    "href": "index.html#footnotes",
+    "title": "simple_quarto_website",
+    "section": "Footnotes",
+    "text": "Footnotes\n\n\nAlso known as American storax, star-leaved gum, alligatorwood, gumball tree, or simply sweetgum.↩︎"
+  }
+]

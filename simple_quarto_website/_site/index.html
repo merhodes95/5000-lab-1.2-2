@@ -8,7 +8,7 @@
 
 <meta name="author" content="Morgan Dreiss">
 
-<title>simple_quarto_website – About</title>
+<title>simple_quarto_website</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -21,41 +21,27 @@ ul.task-list li input[type="checkbox"] {
   margin: 0 0.8em 0.2em -1em; /* quarto-specific, see https://github.com/quarto-dev/quarto-cli/issues/4556 */ 
   vertical-align: middle;
 }
-/* CSS for syntax highlighting */
-pre > code.sourceCode { white-space: pre; position: relative; }
-pre > code.sourceCode > span { line-height: 1.25; }
-pre > code.sourceCode > span:empty { height: 1.2em; }
-.sourceCode { overflow: visible; }
-code.sourceCode > span { color: inherit; text-decoration: inherit; }
-div.sourceCode { margin: 1em 0; }
-pre.sourceCode { margin: 0; }
-@media screen {
-div.sourceCode { overflow: auto; }
+/* CSS for citations */
+div.csl-bib-body { }
+div.csl-entry {
+  clear: both;
+  margin-bottom: 0em;
 }
-@media print {
-pre > code.sourceCode { white-space: pre-wrap; }
-pre > code.sourceCode > span { display: inline-block; text-indent: -5em; padding-left: 5em; }
+.hanging-indent div.csl-entry {
+  margin-left:2em;
+  text-indent:-2em;
 }
-pre.numberSource code
-  { counter-reset: source-line 0; }
-pre.numberSource code > span
-  { position: relative; left: -4em; counter-increment: source-line; }
-pre.numberSource code > span > a:first-child::before
-  { content: counter(source-line);
-    position: relative; left: -1em; text-align: right; vertical-align: baseline;
-    border: none; display: inline-block;
-    -webkit-touch-callout: none; -webkit-user-select: none;
-    -khtml-user-select: none; -moz-user-select: none;
-    -ms-user-select: none; user-select: none;
-    padding: 0 4px; width: 4em;
-  }
-pre.numberSource { margin-left: 3em;  padding-left: 4px; }
-div.sourceCode
-  {   }
-@media screen {
-pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+div.csl-left-margin {
+  min-width:2em;
+  float:left;
 }
-</style>
+div.csl-right-inline {
+  margin-left:2em;
+  padding-left:1em;
+}
+div.csl-indent {
+  margin-left: 2em;
+}</style>
 
 
 <script src="site_libs/quarto-nav/quarto-nav.js"></script>
@@ -101,7 +87,39 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     "search-label": "Search"
   }
 }</script>
+<script src="site_libs/quarto-diagram/mermaid.min.js"></script>
+<script src="site_libs/quarto-diagram/mermaid-init.js"></script>
+<link href="site_libs/quarto-diagram/mermaid.css" rel="stylesheet">
 
+  <script src="https://cdnjs.cloudflare.com/polyfill/v3/polyfill.min.js?features=es6"></script>
+  <script src="https://cdn.jsdelivr.net/npm/mathjax@3/es5/tex-chtml-full.js" type="text/javascript"></script>
+
+<script type="text/javascript">
+const typesetMath = (el) => {
+  if (window.MathJax) {
+    // MathJax Typeset
+    window.MathJax.typeset([el]);
+  } else if (window.katex) {
+    // KaTeX Render
+    var mathElements = el.getElementsByClassName("math");
+    var macros = [];
+    for (var i = 0; i < mathElements.length; i++) {
+      var texText = mathElements[i].firstChild;
+      if (mathElements[i].tagName == "SPAN") {
+        window.katex.render(texText.data, mathElements[i], {
+          displayMode: mathElements[i].classList.contains('display'),
+          throwOnError: false,
+          macros: macros,
+          fleqn: false
+        });
+      }
+    }
+  }
+}
+window.Quarto = {
+  typesetMath
+};
+</script>
 
 </head>
 
@@ -123,11 +141,11 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
           <div class="collapse navbar-collapse" id="navbarCollapse">
             <ul class="navbar-nav navbar-nav-scroll me-auto">
   <li class="nav-item">
-    <a class="nav-link" href="./index.html"> 
+    <a class="nav-link active" href="./index.html" aria-current="page"> 
 <span class="menu-text">Home</span></a>
   </li>  
   <li class="nav-item">
-    <a class="nav-link active" href="./about.html" aria-current="page"> 
+    <a class="nav-link" href="./about.html"> 
 <span class="menu-text">About</span></a>
   </li>  
   <li class="nav-item">
@@ -150,9 +168,16 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#section-1" id="toc-section-1" class="nav-link active" data-scroll-target="#section-1">Section 1</a></li>
-  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2">Section 2</a></li>
-  <li><a href="#section-3" id="toc-section-3" class="nav-link" data-scroll-target="#section-3">Section 3</a></li>
+  <li><a href="#section-1" id="toc-section-1" class="nav-link active" data-scroll-target="#section-1">Section 1</a>
+  <ul class="collapse">
+  <li><a href="#sweetgum-tree" id="toc-sweetgum-tree" class="nav-link" data-scroll-target="#sweetgum-tree">Sweetgum Tree</a></li>
+  <li><a href="#theordore-roosevelt" id="toc-theordore-roosevelt" class="nav-link" data-scroll-target="#theordore-roosevelt">Theordore Roosevelt</a></li>
+  </ul></li>
+  <li><a href="#section-2" id="toc-section-2" class="nav-link" data-scroll-target="#section-2">Section 2</a>
+  <ul class="collapse">
+  <li><a href="#random-facts" id="toc-random-facts" class="nav-link" data-scroll-target="#random-facts">Random Facts</a></li>
+  </ul></li>
+  <li><a href="#section-3-heading" id="toc-section-3-heading" class="nav-link" data-scroll-target="#section-3-heading">Section 3 Heading</a></li>
   </ul>
 </nav>
     </div>
@@ -161,7 +186,7 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">About</h1>
+<h1 class="title">simple_quarto_website</h1>
 </div>
 
 
@@ -186,27 +211,116 @@ pre > code.sourceCode > span > a:first-child::before { text-decoration: underlin
 
 <section id="section-1" class="level1">
 <h1>Section 1</h1>
-<p>Phasellus et massa efficitur ipsum feugiat laoreet tincidunt a ex. Praesent suscipit elementum pharetra. Nam ultrices id metus ut ornare. Donec eget orci urna. Phasellus eu neque ligula. Cras volutpat egestas libero facilisis imperdiet. Morbi semper et leo in vestibulum. Pellentesque orci elit, hendrerit id consequat non, fermentum sed mauris. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam at fermentum enim, a interdum lectus.</p>
+<section id="sweetgum-tree" class="level2">
+<h2 class="anchored" data-anchor-id="sweetgum-tree">Sweetgum Tree</h2>
+<p>The American Sweetgum Tree<a href="#fn1" class="footnote-ref" id="fnref1" role="doc-noteref"><sup>1</sup></a> is a deciduous tree in the genus Liquidambar native to warm temperate areas of eastern North America and tropical montane regions of Mexico and Central America. Sweetgum is one of the main valuable forest trees in the southeastern United States, and is a popular ornamental tree in temperate climates. It is recognizable by the combination of its five-pointed star-shaped leaves (similar to maple leaves) and its hard, spiked fruits. <span class="citation" data-cites="weakley2015flora">(<a href="#ref-weakley2015flora" role="doc-biblioref">Weakley 2015</a>)</span></p>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/sweetgum_tree.png" title="Sweetgum Tree in Fall" class="img-fluid figure-img" style="width:5in"></p>
+<figcaption>Sweetgum Tree in Fall</figcaption>
+</figure>
+</div>
+<p>Duis tincidunt eget risus in congue. Aenean tempus cursus metus eget vulputate.</p>
+<div class="cell" data-layout-align="default">
+<div class="cell-output-display">
+<div>
+<p></p><figure class="figure"><p></p>
+<div>
+<pre class="mermaid mermaid-js">flowchart LR
+  A[Climate] --&gt; B{Season?}
+  B --&gt; C[Spring]
+  B --&gt; D[Fall]
+  C --&gt; E(Plant Beans)
+  D --&gt; F(Plant Garlic)
+
+
+</pre>
+</div>
+<p></p></figure><p></p>
+</div>
+</div>
+</div>
+</section>
+<section id="theordore-roosevelt" class="level2">
+<h2 class="anchored" data-anchor-id="theordore-roosevelt">Theordore Roosevelt</h2>
+<blockquote class="blockquote">
+<p>“The beauty and charm of the wilderness are his for the asking, for the edges of the wilderness lie close beside the beaten roads of the present travel.” - Theodore Roosevelt</p>
+</blockquote>
+<div class="quarto-figure quarto-figure-center">
+<figure class="figure">
+<p><img src="images/Theodore_roosevelt_BAH-p256.png" title="Teddy Roosevelt" class="img-fluid figure-img" style="width:4in"></p>
+<figcaption>Teddy Roosevelt</figcaption>
+</figure>
+</div>
+</section>
 </section>
 <section id="section-2" class="level1">
 <h1>Section 2</h1>
-<p>Phasellus et massa efficitur ipsum feugiat laoreet tincidunt a ex. Praesent suscipit elementum pharetra. Nam ultrices id metus ut ornare. Donec eget orci urna. Phasellus eu neque ligula. Cras volutpat egestas libero facilisis imperdiet. Morbi semper et leo in vestibulum. Pellentesque orci elit, hendrerit id consequat non, fermentum sed mauris. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam at fermentum enim, a interdum lectus.</p>
+<ul>
+<li>Nullam ac faucibus turpis. Curabitur in accumsan lectus, eget mattis orci. Curabitur non lectus aliquet, tincidunt ligula sed, tempor sapien.</li>
+<li>Vestibulum interdum ex diam, ut auctor elit posuere ac. Pellentesque sed elit sed enim pellentesque facilisis. Etiam pulvinar non nisi a accumsan.</li>
+<li>Vestibulum fringilla nec neque sit amet cursus. Quisque mollis nibh luctus, congue tellus nec, fringilla diam. Vivamus consectetur viverra quam quis blandit.</li>
+</ul>
+<section id="random-facts" class="level2">
+<h2 class="anchored" data-anchor-id="random-facts">Random Facts</h2>
+<ul>
+<li>The Pythagorean Theorem: <span class="math inline">\(a^2 + b^2 = c^2\)</span></li>
+<li>Conversion from fahrenheit to celsius: <span class="math display">\[T(°C)=(T(°F)-32)*1.8\]</span></li>
+</ul>
+<table class="caption-top table">
+<caption>Table of even and odd numbers</caption>
+<thead>
+<tr class="header">
+<th style="text-align: center;">Evens</th>
+<th style="text-align: center;">Odds</th>
+</tr>
+</thead>
+<tbody>
+<tr class="odd">
+<td style="text-align: center;">12</td>
+<td style="text-align: center;">17</td>
+</tr>
+<tr class="even">
+<td style="text-align: center;">42</td>
+<td style="text-align: center;">21</td>
+</tr>
+<tr class="odd">
+<td style="text-align: center;">6</td>
+<td style="text-align: center;">1</td>
+</tr>
+</tbody>
+</table>
 </section>
-<section id="section-3" class="level1">
-<h1>Section 3</h1>
+</section>
+<section id="section-3-heading" class="level1">
+<h1>Section 3 Heading</h1>
+<div class="columns">
+<div class="column" style="width:47%;">
+<p>Phasellus eget est dolor. Sed vitae interdum lacus. Morbi metus velit, consequat non ligula at, fermentum dapibus tortor. Duis libero mi, sagittis at mauris sed, sodales suscipit lectus. Nullam fringilla in leo vitae elementum. Etiam bibendum pulvinar ultricies. Curabitur vitae venenatis diam. Nullam commodo nulla sit amet semper condimentum. Praesent nibh sem, pellentesque non lobortis eget, viverra ac ligula. Morbi scelerisque libero nec orci finibus, iaculis vehicula risus scelerisque. Nulla vitae luctus nibh. Nulla facilisi. Nam euismod libero felis, vel tempus ipsum viverra at. Aenean non dolor felis. Vestibulum facilisis a sapien ac suscipit. Morbi semper gravida iaculis.</p>
+</div><div class="column" style="width:6%;">
+
+</div><div class="column" style="width:47%;">
 <p>Phasellus et massa efficitur ipsum feugiat laoreet tincidunt a ex. Praesent suscipit elementum pharetra. Nam ultrices id metus ut ornare. Donec eget orci urna. Phasellus eu neque ligula. Cras volutpat egestas libero facilisis imperdiet. Morbi semper et leo in vestibulum. Pellentesque orci elit, hendrerit id consequat non, fermentum sed mauris. Orci varius natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Aliquam at fermentum enim, a interdum lectus.</p>
-<div id="d2c9d29e" class="cell" data-execution_count="1">
-<div class="sourceCode cell-code" id="cb1"><pre class="sourceCode python code-with-copy"><code class="sourceCode python"><span id="cb1-1"><a href="#cb1-1" aria-hidden="true" tabindex="-1"></a>x <span class="op">=</span> <span class="st">"Hello World"</span></span>
-<span id="cb1-2"><a href="#cb1-2" aria-hidden="true" tabindex="-1"></a><span class="bu">print</span>(x)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-<div class="cell-output cell-output-stdout">
-<pre><code>Hello World</code></pre>
 </div>
 </div>
+<p>Video about Maryland plants:</p>
+<div class="quarto-video ratio ratio-16x9"><iframe data-external="1" src="https://www.youtube.com/embed/aA4UVrya0qw" title="" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen=""></iframe></div>
+
 
 
 </section>
 
-</main> <!-- /main -->
+
+<div id="quarto-appendix" class="default"><section class="quarto-appendix-contents" role="doc-bibliography" id="quarto-bibliography"><h2 class="anchored quarto-appendix-heading">References</h2><div id="refs" class="references csl-bib-body hanging-indent" data-entry-spacing="0" role="list">
+<div id="ref-weakley2015flora" class="csl-entry" role="listitem">
+Weakley, Alan S. 2015. <span>“Flora of the Southern and Mid-Atlantic States.”</span> Citeseer.
+</div>
+</div></section><section id="footnotes" class="footnotes footnotes-end-of-document" role="doc-endnotes"><h2 class="anchored quarto-appendix-heading">Footnotes</h2>
+
+<ol>
+<li id="fn1"><p>Also known as American storax, star-leaved gum, alligatorwood, gumball tree, or simply sweetgum.<a href="#fnref1" class="footnote-back" role="doc-backlink">↩︎</a></p></li>
+</ol>
+</section></div></main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
   const toggleBodyColorMode = (bsSheetEl) => {
